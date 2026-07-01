@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C++ Powered Calculator</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+    <script type="module" src="/src/main.ts" defer></script>
+  </head>
+
+  <body>
+    <div class="app-container">
+      
+      <!-- Calculator Panel -->
+      <main class="calculator glass-panel">
+        
+        <!-- Screen Display -->
+        <div class="display">
+          <div class="display-formula" id="formula-display"></div>
+          <div class="display-main">
+            <span class="display-indicator" id="status-indicator">OK</span>
+            <div class="display-value" id="value-display">0</div>
+          </div>
+        </div>
+
+        <!-- CLI Text Expression Input -->
+        <div class="input-row">
+          <input 
+            type="text" 
+            class="expression-input" 
+            id="expression-input" 
+            placeholder="Or type a complex formula here..." 
+            autocomplete="off" 
+            autofocus 
+          />
+        </div>
+
+        <!-- Calculator Keypad -->
+        <div class="keypad">
+          <!-- Row 1 -->
+          <button class="key key-clear" data-action="all-clear">AC</button>
+          <button class="key key-clear" data-action="delete">C</button>
+          <button class="key key-operator" data-val="(">(</button>
+          <button class="key key-operator" data-val=")">)</button>
+          
+          <!-- Row 2 -->
+          <button class="key" data-val="7">7</button>
+          <button class="key" data-val="8">8</button>
+          <button class="key" data-val="9">9</button>
+          <button class="key key-operator" data-val="/">/</button>
+          
+          <!-- Row 3 -->
+          <button class="key" data-val="4">4</button>
+          <button class="key" data-val="5">5</button>
+          <button class="key" data-val="6">6</button>
+          <button class="key key-operator" data-val="*">*</button>
+          
+          <!-- Row 4 -->
+          <button class="key" data-val="1">1</button>
+          <button class="key" data-val="2">2</button>
+          <button class="key" data-val="3">3</button>
+          <button class="key key-operator" data-val="-">-</button>
+          
+          <!-- Row 5 -->
+          <button class="key" data-val="0">0</button>
+          <button class="key" data-val=".">.</button>
+          <button class="key key-operator" data-val="+">+</button>
+          <button class="key key-equal" data-action="calculate">=</button>
+        </div>
+      </main>
+
+      <!-- History Panel -->
+      <aside class="history glass-panel">
+        <div class="history-header">
+          <h2 class="history-title">History</h2>
+          <button class="clear-history-btn" id="clear-history-btn">Clear All</button>
+        </div>
+        <div class="history-list" id="history-list">
+          <div class="history-empty" id="history-empty">No history yet</div>
+        </div>
+      </aside>
+
+    </div>
+  </body>
+</html>

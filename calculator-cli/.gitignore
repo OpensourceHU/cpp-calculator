@@ -1,0 +1,11 @@
+# CMake build outputs
+build/
+.cache/
+compile_commands.json
+
+# IDE specific files
+.vscode/
+.idea/
+*.user
+*.suo
+*.sln

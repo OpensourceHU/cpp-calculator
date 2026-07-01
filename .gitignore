@@ -1,0 +1,18 @@
+# C++ backend ignores
+calculator-cli/build/
+calculator-cli/.cache/
+calculator-cli/compile_commands.json
+
+# Tauri UI ignores
+calculator-ui/node_modules/
+calculator-ui/dist/
+calculator-ui/src-tauri/target/
+calculator-ui/src-tauri/bin/
+
+# OS/IDE ignores
+.vscode/
+.idea/
+.DS_Store
+*.suo
+*.user
+Thumbs.db
